@@ -158,32 +158,55 @@ th, td {
 }
 /****** Styling the Main ******************** */
 
-.headerContent {
-    width: 90%;
-    margin: 0 auto;
+
+
+/****** Styling the Footer ******************** */
+
+.footer{
+    background-color: black;
+    color: whitesmoke;
+    height: 200px;
+}
+
+.footerContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+    height: 200px;
+    font-size: 1.3rem;
+   
+}
+
+.footerTextContainer{
     text-align: center;
 }
 
-.mainContent {
-    width: 90%;
-    margin: 0 auto;
+.footerTitle{
+    margin-bottom: 10px;
 }
 
-.heroContent {
-    width: 90%;
-    margin: 0 auto;
+.iconsContainer{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
 }
 
-.footerContent {
-    width: 90%;
-    margin: 0 auto;
+.iconsContainer a{
+    color: white;
 }
 
-img{
-    max-width: 100%;
+.iconsContainer a:hover {
+    color: yellow;
 }
 
-/****** Styling the Footer ******************** */
+.iconMedia{
+    font-size: 2rem;
+    color: inherit;
+    
+}
+
 
     /* ********************************************** */
     /* *********  MEDIA QUERYS ********************* */
@@ -215,6 +238,17 @@ img{
     .titleContainer .button{
         width: 20%;
 
+    }
+
+    /* Footer Styles */
+
+    .footerContent{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .iconsContainer{
+        width: 20%;
     }
 
    }
