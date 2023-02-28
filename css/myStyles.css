@@ -1,0 +1,225 @@
+*{
+    margin: 0px;
+    border: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+/****** Styling the Header ******************** */
+
+.headerContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* width: 100vw; */
+    height: 100px;
+    padding: 10px 20px;
+}
+
+.logo{
+    width: 70%;
+}
+
+.iconCarrito:hover, .iconX:hover{
+    cursor: pointer;
+    color: red;
+}
+
+.iconX{
+    color: green;
+    background-color: rgb(247, 206, 73);
+    margin-bottom: 30px;
+    /* margin-left: calc(50% - 10px); */
+    margin-left: 80%;
+}
+
+.contenedorCarrito{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.material-symbols-outlined {
+    font-weight: bold;
+    font-size: 2.5rem;
+    width: 10%;
+    justify-self: flex-end;
+    align-self: center;
+}
+
+   .submenuCarrito{
+       display: none;
+       position: absolute;
+       right: 0PX;
+       top: 0PX;
+       z-index: 5;
+       background-color: rgba(124, 173, 26, 0.8);
+       width: 100%;
+       padding: 10px;
+       padding-top: 40px;
+       border: 1px solid green;
+       margin-top: 50px;
+       overflow: hidden;
+       border-radius: 5px;
+       /* height: 100vh; */
+   }
+
+.carritoTable{
+    width: 100%;
+    border: 1px solid red;
+    background-color: whitesmoke;
+    border-radius: inherit;
+    padding: 20px 5px;
+}
+
+
+   
+th, td {
+    text-align: center;
+    padding: 5px;
+  }
+
+    .eliminar{
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        padding: 5px;
+        border-radius: 50%;
+        text-decoration: none;
+    }
+
+.submenuCarrito .vaciarCarritoBtn{
+    display: inline-block;
+    background-color: rgb(247, 106, 13);
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: inherit;
+    cursor: pointer;
+}
+
+/****** Styling the Hero ******************** */
+
+
+
+.heroWrapper{
+    background: url('../images/hero1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30vh;
+}
+
+.heroContent{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.heroContent .titleContainer{
+    margin: 0 auto;
+    width: 80%;
+    height: 60%;
+    text-align: center;
+    background-color: rgba(22, 3, 3, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.titleContainer .button{
+    width: 80%;
+    padding: 5px 10px;
+    align-self: center;
+    margin-top: 10px;
+    border-radius: inherit;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.titleContainer .button:hover{
+    background-color: rgb(245, 223, 29);
+}
+/****** Styling the Main ******************** */
+
+.headerContent {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mainContent {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.heroContent {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footerContent {
+    width: 90%;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+/****** Styling the Footer ******************** */
+
+    /* ********************************************** */
+    /* *********  MEDIA QUERYS ********************* */
+    /* ********************************************** */
+
+
+   @media screen and (min-width: 750px){
+    .headerContent{
+        flex-direction: row;
+        height: 60px;
+    }
+
+    .material-symbols-outlined {
+        
+        justify-self: flex-end;
+        align-self: flex-end;
+       }
+
+    .submenuCarrito{
+        width: 40%;
+    }
+
+    .logo{
+        max-width: 25%;
+    }
+
+    /* hero styles */
+
+    .titleContainer .button{
+        width: 20%;
+
+    }
+
+   }
+
+    
+
+
+  
