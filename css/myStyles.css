@@ -60,15 +60,14 @@ html{
    .submenuCarrito{
        display: none;
        position: absolute;
-       right: 0PX;
+       right: 5PX;
        top: 0PX;
        z-index: 5;
-       background-color: rgba(124, 173, 26, 0.8);
        background-color: rgba(168, 178, 192, 0.8);
        width: 100%;
        padding: 10px;
        padding-top: 40px;
-       border: 1px solid green;
+       border: 1px solid grey;
        margin-top: 50px;
        overflow: hidden;
        border-radius: 5px;
@@ -77,7 +76,6 @@ html{
 
 .carritoTable{
     width: 100%;
-    border: 1px solid red;
     background-color: whitesmoke;
     border-radius: inherit;
     padding: 20px 5px;
@@ -138,7 +136,7 @@ td img{
 
 .heroContent .titleContainer{
     margin: 0 auto;
-    width: 50%;
+    width: 90%;
     height: 70%;
     text-align: center;
     background-color: rgba(22, 3, 3, 0.7);
@@ -147,6 +145,12 @@ td img{
     flex-direction: column;
     justify-content: center;
     border-radius: 5px;
+}
+
+.titleContainer .taitleParagraph{
+    color: lightgray;
+    font-size: 1.1rem;
+    margin: 5px;
 }
 
 .titleContainer .button{
@@ -301,6 +305,10 @@ td img{
     }
 
     /* hero styles */
+
+    .heroContent .titleContainer{
+        width: 70%;
+    }
 
     .titleContainer .button{
         width: 20%;
