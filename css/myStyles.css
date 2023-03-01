@@ -5,16 +5,14 @@
     box-sizing: border-box;
 }
 
+
 html{
     font-family: sans-serif;
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
-}
-
 /****** Styling the Header ******************** */
+
+
 
 .headerContent{
     display: flex;
@@ -37,10 +35,12 @@ body{
 
 .iconX{
     color: green;
-    background-color: rgb(247, 206, 73);
+    background-color: white;
     margin-bottom: 30px;
-    /* margin-left: calc(50% - 10px); */
     margin-left: 80%;
+    border-radius: 10px;
+    text-align: center;
+    
 }
 
 .contenedorCarrito{
@@ -64,6 +64,7 @@ body{
        top: 0PX;
        z-index: 5;
        background-color: rgba(124, 173, 26, 0.8);
+       background-color: rgba(168, 178, 192, 0.8);
        width: 100%;
        padding: 10px;
        padding-top: 40px;
@@ -103,11 +104,12 @@ th, td {
     background-color: rgb(247, 106, 13);
     color: white;
     padding: 10px 20px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-size: 1.3rem;
     font-weight: bold;
     border-radius: inherit;
     cursor: pointer;
+    margin: 20px auto;
 }
 
 /****** Styling the Hero ******************** */
@@ -158,6 +160,64 @@ th, td {
 }
 /****** Styling the Main ******************** */
 
+.main {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 5px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.main .article{
+    width: auto;
+    border: 1px solid gray;
+    padding: .5rem;
+    /* overflow:hidden; */
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color: rgb(233, 230, 230);
+}
+
+.articleH1{
+    margin-top: 10px;
+}
+
+.main img{
+    width: 100%;
+    
+    border-radius: inherit;
+}
+
+.main .precioContainer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    width: 100%;
+}
+
+.articlePrecio{
+    margin: 15px;
+}
+
+.articlePrecio span{
+    font-weight: bold;
+}
+
+.main .agregarButton{
+    margin: 10px auto;
+    background-color: rgba(243, 141, 25, 0.966);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    padding: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
 
 
 /****** Styling the Footer ******************** */
@@ -166,6 +226,7 @@ th, td {
     background-color: black;
     color: whitesmoke;
     height: 200px;
+    border: 1px solid red;
 }
 
 .footerContent{
@@ -239,6 +300,15 @@ th, td {
         width: 20%;
 
     }
+
+/* main styles *********** */
+
+.main {
+ 
+ 
+    grid-template-columns: repeat(3, 1fr);
+ 
+}
 
     /* Footer Styles */
 
