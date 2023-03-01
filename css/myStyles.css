@@ -90,21 +90,27 @@ th, td {
     padding: 5px;
   }
 
-    .eliminar{
-        background-color: red;
-        color: white;
-        font-weight: bold;
-        padding: 5px;
-        border-radius: 50%;
-        text-decoration: none;
-    }
+td img{
+    /* object-fit: cover; */
+    width: 80px;
+    border-radius: 5px;
+}  
+
+.eliminar{
+    background-color: red;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    text-decoration: none;
+    
+}
 
 .submenuCarrito .vaciarCarritoBtn{
-    display: inline-block;
+    display: block;
     background-color: rgb(247, 106, 13);
     color: white;
     padding: 10px 20px;
-    /* margin-top: 20px; */
     font-size: 1.3rem;
     font-weight: bold;
     border-radius: inherit;
@@ -132,10 +138,10 @@ th, td {
 
 .heroContent .titleContainer{
     margin: 0 auto;
-    width: 80%;
-    height: 60%;
+    width: 50%;
+    height: 70%;
     text-align: center;
-    background-color: rgba(22, 3, 3, 0.5);
+    background-color: rgba(22, 3, 3, 0.7);
     color: white;
     display: flex;
     flex-direction: column;
@@ -226,7 +232,7 @@ th, td {
     background-color: black;
     color: whitesmoke;
     height: 200px;
-    border: 1px solid red;
+    
 }
 
 .footerContent{
@@ -305,7 +311,7 @@ th, td {
 
 .main {
  
- 
+    width: 70%;
     grid-template-columns: repeat(3, 1fr);
  
 }
