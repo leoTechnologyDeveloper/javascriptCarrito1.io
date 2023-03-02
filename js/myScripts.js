@@ -88,6 +88,13 @@ function closeCarrito() {
  function eliminarCurso(e) {
      e.preventDefault();
      console.log("eliminando curso");
+     if (e.target.classList.contains('aEliminar')) {
+          const platoId = e.target.getAttribute('data-id');
+  
+          // Eliminando del arreglo por el data-id
+          platosEnCarrito = platosEnCarrito.filter(plato => plato.id !== platoId);
+      }
+          pintandoCarritoHtml(); // Iterando sobre el carrito y mostrando su HTML
  }
 
  // F6 -------------------------------
@@ -95,6 +102,8 @@ function closeCarrito() {
  function vaciandoCarrito(e) {
      e.preventDefault();
      console.log("vaciando carrito");
+     platosEnCarrito = [];
+     pintandoCarritoHtml();
  }
 
  // F7 -------------------------------
@@ -113,7 +122,7 @@ function closeCarrito() {
                <td>${plato.nombre}</td>
                <td>${plato.precio}</td>
                <td>${plato.cantidad}</td>
-               <td class="tdEliminar"><a href="#" class="eliminar" data-id="${plato.id}">X</a></td>
+               <td class="tdEliminar"><a href="#" class="aEliminar" data-id="${plato.id}">X</a></td>
           `;
           carritoTbody.appendChild(rowInfoEnHtml);
      });
