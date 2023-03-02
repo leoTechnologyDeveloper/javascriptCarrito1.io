@@ -14,8 +14,6 @@ let platosEnCarrito = [];
 
 chargingEventListeners();
 
-
-
 // CHARGING EventListeners **************
 
 function chargingEventListeners(params) {
@@ -36,8 +34,8 @@ function hacerClick(e) {
      e.preventDefault();
      console.log("me cliqueaste");
   }
-// F1 -------------------------------
 
+  // F1 -------------------------------
 
 function openCarrito() {
      // console.log("Abriendo el carrito");
@@ -73,11 +71,32 @@ function closeCarrito() {
                precio: cursoSeleccionado.querySelector(".articlePrecio span").textContent,
                id: cursoSeleccionado.querySelector(".agregarButton").getAttribute("data-id"),
                cantidad: 1
-          }
+          };
 
+        // Revisando si un elemento ya esxiste en el carrito
+
+        const existe = platosEnCarrito.some( plato => plato.id === cursoActualData.id);
+
+        if (existe) {
+            const platos = platosEnCarrito.map(plato => {
+                if (plato.id === cursoActualData.id) {
+                    plato.cantidad++;
+                    return plato; // retorna el objeto actualizado
+                }else{
+                    return plato; // retorna los objetos que no son los duplicados
+                }
+            });
+
+            platosEnCarrito = [...platos];
+        } else {
+            // Agregando elementos al arreglo de carrito
+            platosEnCarrito = [...platosEnCarrito, cursoActualData];
+        }
+
+          //---------------------------------------------
           // console.log("Aca ya leimos el curso recibido y es objeto es este :");
           // console.log(cursoActualData);
-          platosEnCarrito = [...platosEnCarrito, cursoActualData];
+          
           // console.log("Aca los platos actuales en el carrito");
           // console.log(platosEnCarrito);
           pintandoCarritoHtml();
