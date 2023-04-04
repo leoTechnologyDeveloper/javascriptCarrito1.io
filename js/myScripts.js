@@ -22,7 +22,19 @@ function chargingEventListeners(params) {
      main.addEventListener('click', agregarCurso );
      carritoTable.addEventListener('click', eliminarCurso );
      vaciarCarritoBtn.addEventListener('click', vaciandoCarrito );
+         // Cuando el documento esta listo
+    document.addEventListener('DOMContentLoaded',()=>{
+  
+        platosEnCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        console.log(platosEnCarrito);
+        pintandoCarritoHtml();
+    });
 }
+
+
+
+
+
 
 
 // FUCTIONS ****************************
@@ -99,6 +111,7 @@ function closeCarrito() {
           
           // console.log("Aca los platos actuales en el carrito");
           // console.log(platosEnCarrito);
+          
           pintandoCarritoHtml();
      }  
 
@@ -146,7 +159,10 @@ function closeCarrito() {
           carritoTbody.appendChild(rowInfoEnHtml);
      });
 
+     // Agregando el carrito de compras al storage
+     sincronizarStorage();
      console.log(platosEnCarrito);
+     
  }
 
 // F8 -------------------------------
@@ -162,6 +178,11 @@ function closeCarrito() {
  }
 
 
+ // F9 -------------------------------
+
+ function sincronizarStorage() {
+    localStorage.setItem('carrito', JSON.stringify(platosEnCarrito))
+}
 
 
 
